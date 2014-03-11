@@ -49,3 +49,6 @@ fi
 # FITS
 /vagrant/install_fits.sh
 
+# Code & Configuration
+/vagrant/clone_code.sh
+
