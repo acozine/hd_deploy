@@ -1,0 +1,4 @@
+CREATE DATABASE hd_production;
+GRANT ALL ON hd_production.* TO hdProd@localhost IDENTIFIED BY 'hdProd';
+exit
+
