@@ -32,4 +32,6 @@ default-storage-engine = InnoDB' -i.bak /etc/my.cnf
 # start mysql and run through the secure installation
 service mysqld start
 /usr/bin/mysql_secure_installation < /vagrant/mysql_secure_non-secure_defaults.txt
-mysql -u root -ppassword < /vagrant/mysql_fedora_tables.txt 
+mysql -u root -ppassword < /vagrant/mysql_fedora_tables.txt
+mysql -u root -ppassword < /vagrant/mysql_production_tables.txt
+
