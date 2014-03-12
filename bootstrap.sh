@@ -49,9 +49,15 @@ fi
 # FITS
 /vagrant/install_fits.sh
 
-# apache & passenger
+# clone code
+/vagrant/clone_code.sh
+
+# install apache & passenger
 /vagrant/install_passenger.sh
 
-# Code & Configuration
-/vagrant/clone_code.sh
+# configure apache
+/vagrant/configure_apache.sh
+
+# configuration
+/vagrant/configure_code.sh
 
