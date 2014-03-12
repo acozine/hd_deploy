@@ -6,7 +6,8 @@ if [ "$EUID" -ne "0" ] ; then
         exit 1
 fi
 
-# move into /opt/$HYDRA_NAME to access rake tasks
+# source env and move to /opt/$HYDRA_NAME to access rake tasks
+source /etc/environment
 cd /opt/$HYDRA_NAME
 
 # copy initializers for secret token & devise
@@ -75,4 +76,10 @@ chown -R $INSTALL_USER:$INSTALL_USER /opt/$HYDRA_NAME
 service tomcat6 restart
 service httpd restart
 
+# configure pool_q & start a pool
+cp /opt/hydradam/script/pool_q /etc/rc.d/init.d/
+chown root:root /etc/init.d/pool_q
+chmod 0755 /etc/init.d/pool_q
+chkconfig --add pool_q
+service pool_q start
 
