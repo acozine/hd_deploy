@@ -19,5 +19,7 @@ sudo apxs -cia mod_xsendfile.c
 mkdir /opt/passenger_temp /opt/xsendfile
 
 # call the expect script to install the apache2-module 
+source /etc/environment
+cd /opt/$HYDRA_NAME
 expect /vagrant/install_passenger.exp
 
